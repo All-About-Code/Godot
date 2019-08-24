@@ -1,0 +1,50 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "ObjectLoader",
+"language": "GDScript",
+"path": "res://addons/2D Objects Addon/scripts/Loader.gd"
+}, {
+"base": "Node2D",
+"class": "Sizer",
+"language": "GDScript",
+"path": "res://addons/2D Objects Addon/scripts/Sizer.gd"
+}, {
+"base": "Node",
+"class": "System",
+"language": "GDScript",
+"path": "res://addons/2D Objects Addon/scripts/System.gd"
+} ]
+_global_script_class_icons={
+"ObjectLoader": "",
+"Sizer": "",
+"System": ""
+}
+
+[application]
+
+config/name="2D Objects Addon"
+run/main_scene="res://Example.tscn"
+config/icon="res://icon.png"
+
+[display]
+
+window/size/width=500
+window/size/height=500
+
+[editor_plugins]
+
+enabled=PoolStringArray( "2D Objects Addon" )
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

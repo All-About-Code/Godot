@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Example.gd" type="Script" id=1]
+[ext_resource path="res://addons/2D Objects Addon/scripts/Loader.gd" type="Script" id=2]
+[ext_resource path="res://addons/2D Objects Addon/scenes/square.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/2D Objects Addon/scripts/Sizer.gd" type="Script" id=4]
+
+[node name="Main" type="Node"]
+script = ExtResource( 1 )
+
+[node name="ObjectLoader" type="Node2D" parent="."]
+z_index = -1
+script = ExtResource( 2 )
+Load_Files = ExtResource( 3 )
+Size = Vector2( 1.5, 0.5 )
+
+[node name="Sizer" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Hello, World!"
